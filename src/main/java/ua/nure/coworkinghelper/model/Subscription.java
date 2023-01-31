@@ -12,7 +12,7 @@ public class Subscription {
     private Long id;
 
     @OneToOne
-    @JoinColumn(name = "customerid", referencedColumnName = "id")
+    @JoinColumn(name = "customerid")
     private Customer customer;
 
     @Column(name = "startdate")

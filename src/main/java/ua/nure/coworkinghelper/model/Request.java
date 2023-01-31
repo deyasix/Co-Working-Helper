@@ -10,15 +10,15 @@ public class Request {
     @Column(name = "id")
     private Long id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "customerid", referencedColumnName = "id")
-    private Customer customer;
-
     @Column(name = "title")
     private String title;
 
     @Column(name="status")
     private String status;
+
+    @ManyToOne
+    @JoinColumn(name = "customerid")
+    private Customer customer;
 
     public Long getId() {
         return id;
